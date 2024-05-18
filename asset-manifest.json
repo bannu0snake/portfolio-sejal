@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-sejal/static/css/main.a0cd6f23.css",
-    "main.js": "/portfolio-sejal/static/js/main.cc2479de.js",
+    "main.css": "/portfolio-sejal/static/css/main.85dfb1c7.css",
+    "main.js": "/portfolio-sejal/static/js/main.78a7a3b2.js",
     "static/js/453.1407b060.chunk.js": "/portfolio-sejal/static/js/453.1407b060.chunk.js",
     "static/media/Pecita.woff": "/portfolio-sejal/static/media/Pecita.c6f10c0e025398024dae.woff",
     "static/media/image 1.svg": "/portfolio-sejal/static/media/image 1.e5036adf6609219c91e67c1a191628b7.svg",
@@ -16,12 +16,15 @@
     "static/media/bi_laptop-fill.svg": "/portfolio-sejal/static/media/bi_laptop-fill.47c251c6d6a6fe4d377695b5b80ee246.svg",
     "static/media/wpf_like.svg": "/portfolio-sejal/static/media/wpf_like.055f5c95e7110b679aa4c4422e745a7f.svg",
     "static/media/Arrow.svg": "/portfolio-sejal/static/media/Arrow.3ba77c9f595823cd6a1bddb8f8579140.svg",
-    "main.a0cd6f23.css.map": "/portfolio-sejal/static/css/main.a0cd6f23.css.map",
-    "main.cc2479de.js.map": "/portfolio-sejal/static/js/main.cc2479de.js.map",
+    "static/media/filled.svg": "/portfolio-sejal/static/media/filled.d788f0069a98687fd578cd8223a846c7.svg",
+    "static/media/upRight.svg": "/portfolio-sejal/static/media/upRight.e16d8421214ae40d58a2d201873324c5.svg",
+    "static/media/Group.svg": "/portfolio-sejal/static/media/Group.0264f35584e638341a6e79f93a18eb71.svg",
+    "main.85dfb1c7.css.map": "/portfolio-sejal/static/css/main.85dfb1c7.css.map",
+    "main.78a7a3b2.js.map": "/portfolio-sejal/static/js/main.78a7a3b2.js.map",
     "453.1407b060.chunk.js.map": "/portfolio-sejal/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0cd6f23.css",
-    "static/js/main.cc2479de.js"
+    "static/css/main.85dfb1c7.css",
+    "static/js/main.78a7a3b2.js"
   ]
 }
