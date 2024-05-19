@@ -8,6 +8,7 @@ import About from "../about/About.jsx";
 import Work from "../work/Work.jsx";
 import { FaBehanceSquare, FaLinkedin } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
+import Project from "../project/Project.jsx";
 const fonts = ["font-play", "font-pecita", "font-pinyon"];
 const Info = () => {
   const [value, setValue] = useState(0);
@@ -108,7 +109,8 @@ const Landing = () => {
         <Route path="*" element={<Info />} />
         <Route path="/about" element={<About />} />
         <Route path="/work" element={<Work />} />
-        {/* <Route path="/resume" element={<Resume />} /> */}
+        <Route path="/resume" element={<Work />} />
+        <Route path="/project" element={<Project />} />
       </Routes>
       <div className="flex flex-col bg-zinc-800 rounded-t-xl px-24">
         <div className="flex justify-between items-center border-b-[1px] py-12 border-gray-600">
@@ -159,8 +161,12 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className="py-9">
+        <div className="py-9 flex justify-between">
           <div className="text-white">Copyright© 2024 All Rights Reserved.</div>
+          <div className="text-white">
+            Designed By <span className="text-red-400">Sejal</span>, Developed
+            By <span className="text-red-400">Mahaboob</span>
+          </div>
         </div>
       </div>
     </div>

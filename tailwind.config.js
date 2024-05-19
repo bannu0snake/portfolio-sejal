@@ -12,6 +12,7 @@ module.exports = {
         pontano: ["Pontano Sans", "sans-serif"],
         pinyon: ["Pinyon Script", "sans-serif"],
         play: ["Play", "sans-serif"],
+        rubik: ["Rubik", "sans-serif"],
       },
     },
   },

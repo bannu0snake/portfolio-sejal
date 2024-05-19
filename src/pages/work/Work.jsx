@@ -5,9 +5,11 @@ import samsung from "../../assets/svgs/image 1.svg";
 import company3 from "../../assets/svgs/image 2.svg";
 import company4 from "../../assets/svgs/image 3.svg";
 import Arrow from "../../assets/svgs/Arrow.svg";
+import { useNavigate } from "react-router-dom";
 // import signzy from "../../assets/svgs/image 1.svg";
 const Work = () => {
-  const Project = ({ title, desc }) => {
+  const Project = ({ title, desc, id }) => {
+    const navigate = useNavigate();
     const [isActive, setIsActive] = useState(false);
 
     return (
@@ -17,6 +19,9 @@ const Work = () => {
         }}
         onMouseLeave={() => {
           setIsActive(false);
+        }}
+        onClick={() => {
+          navigate("/project", { state: { project: id } });
         }}
       >
         {isActive ? (
@@ -40,22 +45,27 @@ const Work = () => {
   const data = [
     {
       title: "Hidden Layers (Live Project) ",
+      key: "HIDDEN_LAYERS",
       desc: "Hidden Layers- The project is a joint research initiative of five leading German art and design schools that aims at sustainably anchoring the teaching of AI topics in the field of design.",
     },
     {
       title: "Subscription Management",
+      key: "SUB_SPACE",
       desc: "To design a subscription management interface that allows users to readily pay for all their subscriptions and maintain a history of the same in the easiest and the simplest way possible at a single place while giving them insights and suggestions based on their usage.",
     },
     {
       title: "Redesigning Onedrive",
+      key: "ONEDRIVE_REDISIGN",
       desc: "Redesigning OneDrive- Creating a better version of the file sharing app",
     },
     {
       title: "Dermatology- Case Study",
+      key: "DOCTALK",
       desc: "In a growing field like this still internet interventions have some drawbacks. It has been observed that people have and are becoming tech savvy rapidly. Though, there are still many advancements required so as to diagnose the disease efficiently. In this project, we’ ve tried to come up with concepts which solves the problems of the patient and helps to make the process easier for the doctor as well.",
     },
     {
       title: "Waste Management",
+      key: "HIDDEN_LAYERS",
       desc: "Design a solution to reduce the complexity of waste management in today's time and make new generation learn the waste segregation in a more interesting manner.",
     },
   ];
@@ -78,8 +88,8 @@ const Work = () => {
           <div className="text-stone-200 text-[64px] px-10 font-normal font-pecita">
             Work
           </div>
-          {data.map(({ title, desc }) => (
-            <Project title={title} desc={desc} />
+          {data.map(({ title, desc, key }) => (
+            <Project title={title} desc={desc} id={key} />
           ))}
           <div>
             <div className="flex justify-end my-10 mr-10">
