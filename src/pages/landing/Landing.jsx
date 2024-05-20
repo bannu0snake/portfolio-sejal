@@ -78,6 +78,11 @@ const Info = () => {
 };
 const Landing = () => {
   const navigate = useNavigate();
+  const openPdf = () => {
+    const pdfUrl =
+      "https://drive.google.com/file/d/1exxL5ke3vikNP2TMVwfK3Vy_OIBpiSGY/view"; // Replace with your PDF URL
+    window.open(pdfUrl, "_blank");
+  };
   return (
     <div className="flex flex-col">
       <div className="flex flex-row justify-between mx-24 mt-10 py-1">
@@ -101,7 +106,9 @@ const Landing = () => {
             <a href="/about">About</a>
           </div>
           {/* <div>Blog</div> */}
-          <div>Resume</div>
+          <div onClick={openPdf} className="cursor-pointer">
+            Resume
+          </div>
         </div>
       </div>
 

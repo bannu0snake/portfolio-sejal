@@ -6,8 +6,14 @@ import company3 from "../../assets/svgs/image 2.svg";
 import company4 from "../../assets/svgs/image 3.svg";
 import Arrow from "../../assets/svgs/Arrow.svg";
 import { useNavigate } from "react-router-dom";
+import Project1 from "../ProjectOveriviews/Project1";
+import Project2 from "../ProjectOveriviews/Project2";
+import Project3 from "../ProjectOveriviews/Project3";
+import Project4 from "../ProjectOveriviews/Project4";
+import Project5 from "../ProjectOveriviews/Project5";
 // import signzy from "../../assets/svgs/image 1.svg";
 const Work = () => {
+  const [selected, setSelected] = useState("");
   const Project = ({ title, desc, id }) => {
     const navigate = useNavigate();
     const [isActive, setIsActive] = useState(false);
@@ -16,9 +22,11 @@ const Work = () => {
       <div
         onMouseEnter={() => {
           setIsActive(true);
+          setSelected(id);
         }}
         onMouseLeave={() => {
           setIsActive(false);
+          setSelected("");
         }}
         onClick={() => {
           navigate("/project", { state: { project: id } });
@@ -65,7 +73,7 @@ const Work = () => {
     },
     {
       title: "Waste Management",
-      key: "HIDDEN_LAYERS",
+      key: "WASTE_MANAGEMENT",
       desc: "Design a solution to reduce the complexity of waste management in today's time and make new generation learn the waste segregation in a more interesting manner.",
     },
   ];
@@ -81,9 +89,19 @@ const Work = () => {
         <img src={company4} alt="" srcset="" />
       </div>
       <div className="flex">
-        <div className="basis-1/2 bg-zinc-900 flex justify-center items-center text-white text-xl font-openSans">
-          Hover on a project to view.
-        </div>
+        {!selected ? (
+          <div className="basis-1/2 bg-zinc-900 flex justify-center items-center text-white text-xl font-openSans">
+            Hover on a project to view.
+          </div>
+        ) : (
+          <div className="basis-1/2">
+            {selected === "HIDDEN_LAYERS" && <Project1 />}
+            {selected === "SUB_SPACE" && <Project2 />}
+            {selected === "ONEDRIVE_REDISIGN" && <Project3 />}
+            {selected === "DOCTALK" && <Project4 />}
+            {selected === "WASTE_MANAGEMENT" && <Project5 />}
+          </div>
+        )}
         <div className="basis-1/2 flex flex-col pt-5">
           <div className="text-stone-200 text-[64px] px-10 font-normal font-pecita">
             Work

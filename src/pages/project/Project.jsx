@@ -28,7 +28,8 @@ const projects = {
         "The conference was held at Köln International School of Design, Germany from 19 July 2022 to 2uly 2022. Each day had a theme for the speakers and the workshops.",
       ],
     },
-    bgColor: "bg-yellow-300",
+    bgColor: "yellow-300",
+    titleColor: "text-yellow-300",
     textColor: "black",
   },
   SUB_SPACE: {
@@ -57,7 +58,8 @@ const projects = {
         "Further, the usability testing was conducted to test the user satisfaction of the application.",
       ],
     },
-    bgColor: "bg-slate-500",
+    bgColor: "slate-500",
+    titleColor: "text-slate-500",
     textColor: "white",
   },
   ONEDRIVE_REDISIGN: {
@@ -75,6 +77,7 @@ const projects = {
     comp2: {
       key: "WHY?",
       desc: "The advent of cloud storage means more users today are turning to apps that provide all in one solutions for document sharing, file storage and backup. Unfortunately the OneDrive app experience is convoluted and possesses a steep learning curve for the novice user. The usability of the app is hindered by redundant elements, confusing structure and features that the average user might seldom use.",
+      note: "*At present, the focus of this project is on the process followed throughout the project. The OneDrive application has now been changed and updated.",
     },
     comp3: {
       key: "HOW?",
@@ -88,7 +91,8 @@ const projects = {
         "Then we did usability testing for the prototype.",
       ],
     },
-    bgColor: "bg-blue-400",
+    bgColor: "blue-400",
+    titleColor: "text-blue-400",
     textColor: "white",
   },
   DOCTALK: {
@@ -110,19 +114,23 @@ const projects = {
     comp3: {
       key: "HOW?",
       desc: [
-        "The project began by defining the scope, building a timeline, formation of teams within group and conducting research in the domain.",
-        "After defining the needs and goals of speakers and attendees of the conference- the process followed with designing website, posters, and other social media assets.",
-        "The process followed by then converting the designs into a live website.",
-        "Deploy- The website was launched to the audience.",
-        "The conference was held at Köln International School of Design, Germany from 19 July 2022 to 2uly 2022. Each day had a theme for the speakers and the workshops.",
+        "We have aimed to make the process of consultation and treatment for derma easier while keeping three main objectives in mind:",
       ],
+      desc2: [
+        "A. Collaboration between stakeholders to make information flow easier.",
+        "B. Efficiency of treatment and derma wellbeing by providing tracking and reminders, virtual diagnosis, follow ups and treatment, medicine delivery and maps, product recommendations and blog.",
+        "C. OCR for ease of report and prescription understanding to help patients unfamiliar with medical language.",
+      ],
+      desc3:
+        "The methods we followed are Desk Study, Observational Study, Sequence Model, Flow Model, Cultural Model, Competitive Analysis, Competitive Matrix, Qualitative Research (Tele Interviews), Quantitative Research (Survey), User Personas, Wireframing and Pilot Study",
     },
-    bgColor: "bg-cyan-600",
+    bgColor: "cyan-600",
+    titleColor: "text-cyan-600",
     textColor: "white",
   },
 };
 const Tag = ({ tag, bgColor, textColor }) => {
-  const background = bgColor;
+  const background = "bg-" + bgColor;
   const color = "text-" + textColor;
   return <div className={`rounded-full p-2 ${background} ${color}`}>{tag}</div>;
 };
@@ -134,7 +142,6 @@ const Project = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   return (
     <div>
       <div className="flex flex-col my-8 items-center mx-40">
@@ -156,18 +163,23 @@ const Project = () => {
         <div className="flex my-16">
           <div className="basis-1/2 flex flex-col pr-16 border-r-[1px] border-zinc-600">
             <div className="border-b-[1px] border-zinc-600">
-              <div className={`pb-5 font-medium text-2xl text-${data.bgColor}`}>
+              <div className={`pb-5 font-medium text-2xl ${data.titleColor}`}>
                 {data.comp1.key}
               </div>
               <div className="text-white pb-16">{data.comp1.desc}</div>
             </div>
             <div>
               <div
-                className={`text-${data.bgColor} pt-16 pb-5 font-medium text-2xl`}
+                className={`${data.titleColor} pt-16 pb-5 font-medium text-2xl`}
               >
                 {data.comp2.key}
               </div>
               <div className="text-white">{data.comp2.desc}</div>
+              {data?.comp2?.note && (
+                <div className="my-4 text-stone-300 text-sm font-normal font-rubik">
+                  {data?.comp2?.note}
+                </div>
+              )}
             </div>
           </div>
           <div className="basis-1/2 ml-16 ">
@@ -182,6 +194,20 @@ const Project = () => {
                 </div>
               </div>
             ))}
+            {data?.comp3?.desc2 && (
+              <div className="my-4">
+                {data.comp3.desc2.map((item) => (
+                  <div className="text-white text-base font-normal font-rubik leading-relaxed pl-3">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            )}
+            {data?.comp3?.desc3 && (
+              <div className="my-4 text-white text-base font-normal font-rubik ml-3">
+                {data?.comp3?.desc3}
+              </div>
+            )}
           </div>
         </div>
       </div>
