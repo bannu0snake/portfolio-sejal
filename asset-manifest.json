@@ -1,16 +1,25 @@
 {
   "files": {
-    "main.css": "/portfolio-sejal/static/css/main.85dfb1c7.css",
-    "main.js": "/portfolio-sejal/static/js/main.78a7a3b2.js",
+    "main.css": "/portfolio-sejal/static/css/main.679b88c5.css",
+    "main.js": "/portfolio-sejal/static/js/main.5f225aaa.js",
     "static/js/453.1407b060.chunk.js": "/portfolio-sejal/static/js/453.1407b060.chunk.js",
+    "static/media/Rectangle.svg": "/portfolio-sejal/static/media/Rectangle.a9e6784972b96ce7902598fde168ec35.svg",
     "static/media/Pecita.woff": "/portfolio-sejal/static/media/Pecita.c6f10c0e025398024dae.woff",
+    "static/media/MacBook Air (15 inch).png": "/portfolio-sejal/static/media/MacBook Air (15 inch).88911b29137d2096f867.png",
     "static/media/image 1.svg": "/portfolio-sejal/static/media/image 1.e5036adf6609219c91e67c1a191628b7.svg",
+    "static/media/Rectangle.png": "/portfolio-sejal/static/media/Rectangle.65443e643c9031b1a502.png",
     "static/media/image 2.svg": "/portfolio-sejal/static/media/image 2.9e9073207233237b0bc682356e918020.svg",
     "static/media/Subject 1.png": "/portfolio-sejal/static/media/Subject 1.bc91312cb21420f11d8c.png",
+    "static/media/Screenshot 2024-05-19 at 12.38 1.png": "/portfolio-sejal/static/media/Screenshot 2024-05-19 at 12.38 1.5be733c30e0164aa7e3c.png",
+    "static/media/image 7.png": "/portfolio-sejal/static/media/image 7.69ad3acd910d3f9b2d22.png",
+    "static/media/image 8.png": "/portfolio-sejal/static/media/image 8.bf3c907db8929d22c409.png",
     "static/media/image 3.svg": "/portfolio-sejal/static/media/image 3.f2e26d537abfa73afffb33f7b3e37696.svg",
+    "static/media/image 6.png": "/portfolio-sejal/static/media/image 6.b95ae65e1d6cf387f2a4.png",
+    "static/media/Screenshot 2024-05-19 at 12.42 1.png": "/portfolio-sejal/static/media/Screenshot 2024-05-19 at 12.42 1.934a79469c90b695a072.png",
+    "static/media/Screenshot 2024-05-19 at 12.42 2.png": "/portfolio-sejal/static/media/Screenshot 2024-05-19 at 12.42 2.982584abf5dd9005f3c9.png",
     "static/media/Group 224.svg": "/portfolio-sejal/static/media/Group 224.7a975bbfeb575d9a33fcfae75ece8fee.svg",
-    "static/media/material-symbols-light_work.svg": "/portfolio-sejal/static/media/material-symbols-light_work.738109ca5e3da23f3ae71b3b581784f0.svg",
     "index.html": "/portfolio-sejal/index.html",
+    "static/media/material-symbols-light_work.svg": "/portfolio-sejal/static/media/material-symbols-light_work.738109ca5e3da23f3ae71b3b581784f0.svg",
     "static/media/vaadin_office.svg": "/portfolio-sejal/static/media/vaadin_office.a1d66024155209b0c8923908b4552395.svg",
     "static/media/mdi_location.svg": "/portfolio-sejal/static/media/mdi_location.67b40ba67c5fbf1bcb06e11b6799e145.svg",
     "static/media/bi_laptop-fill.svg": "/portfolio-sejal/static/media/bi_laptop-fill.47c251c6d6a6fe4d377695b5b80ee246.svg",
@@ -19,12 +28,12 @@
     "static/media/filled.svg": "/portfolio-sejal/static/media/filled.d788f0069a98687fd578cd8223a846c7.svg",
     "static/media/upRight.svg": "/portfolio-sejal/static/media/upRight.e16d8421214ae40d58a2d201873324c5.svg",
     "static/media/Group.svg": "/portfolio-sejal/static/media/Group.0264f35584e638341a6e79f93a18eb71.svg",
-    "main.85dfb1c7.css.map": "/portfolio-sejal/static/css/main.85dfb1c7.css.map",
-    "main.78a7a3b2.js.map": "/portfolio-sejal/static/js/main.78a7a3b2.js.map",
+    "main.679b88c5.css.map": "/portfolio-sejal/static/css/main.679b88c5.css.map",
+    "main.5f225aaa.js.map": "/portfolio-sejal/static/js/main.5f225aaa.js.map",
     "453.1407b060.chunk.js.map": "/portfolio-sejal/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.85dfb1c7.css",
-    "static/js/main.78a7a3b2.js"
+    "static/css/main.679b88c5.css",
+    "static/js/main.5f225aaa.js"
   ]
 }
