@@ -31,6 +31,7 @@ const projects = {
     bgColor: "yellow-300",
     titleColor: "text-yellow-300",
     textColor: "black",
+    link: "https://www.behance.net/gallery/153026427/Hidden-Layers-Design-and-AI-%28Live-Project%29",
   },
   SUB_SPACE: {
     title: "Subspace",
@@ -61,6 +62,7 @@ const projects = {
     bgColor: "slate-500",
     titleColor: "text-slate-500",
     textColor: "white",
+    link: "https://www.behance.net/gallery/154905911/Subspace-Subscription-Management",
   },
   ONEDRIVE_REDISIGN: {
     title: "Onedrive Redesign",
@@ -94,6 +96,7 @@ const projects = {
     bgColor: "blue-400",
     titleColor: "text-blue-400",
     textColor: "white",
+    link: "https://drive.google.com/drive/u/0/mobile/folders/1XJw0vhBmmtgRh7CPinOC_GCsuwbNFKWb?sort=13&direction=a",
   },
   DOCTALK: {
     title: "Dermatology- Case Study",
@@ -127,6 +130,43 @@ const projects = {
     bgColor: "cyan-600",
     titleColor: "text-cyan-600",
     textColor: "white",
+    link: "https://www.behance.net/gallery/156157763/DocTalk-Case-Study",
+  },
+  WASTE_MANAGEMENT: {
+    title: "Waste Management",
+    tags: [
+      "User Experience",
+      "Classroom Project",
+      "Group Project",
+      "Duration : 3 weeks",
+    ],
+    comp1: {
+      key: "WHAT?",
+      desc: "Design a solution to reduce the complexity of waste management in today's time and make new generation learn the waste segregation in a more interesting manner.",
+    },
+    comp2: {
+      key: "WHY?",
+      desc: "Research (primary and secondary), analysis, conceptualisation, pilot study.",
+    },
+    comp3: {
+      key: "HOW?",
+      desc: [
+        "Economic development has increased the living standard of the populace around the globe. This has directly converted into more material utilization and more waste production therefore the need to properly segregate waste has become more crucial.",
+      ],
+      desc2: [
+        "The process began with identifying the problem space and defining project goals.",
+        "The stakeholders were identified to understand the target audience.",
+        "The research phase continued with using the methods like contextual inquiry, user interviews, user surveys and questionnaires.",
+        "The ideation and conceptualisation phase followed by making user personas, mind map, tree diagram and defining the features of the application.",
+        "The design phase consisted of wireframing and to test the satisfaction and user friendliness of the design, usability testing was conducted.",
+      ],
+      desc3:
+        "The methods we followed are Desk Study, Observational Study, Sequence Model, Flow Model, Cultural Model, Competitive Analysis, Competitive Matrix, Qualitative Research (Tele Interviews), Quantitative Research (Survey), User Personas, Wireframing and Pilot Study",
+    },
+    bgColor: "teal-600",
+    titleColor: "text-teal-600",
+    textColor: "white",
+    link: "https://www.behance.net/gallery/156157763/DocTalk-Case-Study",
   },
 };
 const Tag = ({ tag, bgColor, textColor }) => {
@@ -211,7 +251,12 @@ const Project = () => {
           </div>
         </div>
       </div>
-      <div className="text-white text-sm font-normal font-rubik underline text-right mx-40 mb-16 cursor-pointer">
+      <div
+        className="text-white text-sm font-normal font-rubik underline text-right mx-40 mb-16 cursor-pointer"
+        onClick={() => {
+          window.open(data?.link, "_blank");
+        }}
+      >
         <span>{"Click to view full case study"}</span> <span>{"->"}</span>
       </div>
     </div>

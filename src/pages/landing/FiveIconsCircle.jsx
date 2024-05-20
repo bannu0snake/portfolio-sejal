@@ -5,7 +5,6 @@ import Icon3 from "../../assets/svgs/mdi_location.svg";
 import Icon4 from "../../assets/svgs/vaadin_office.svg";
 import Icon5 from "../../assets/svgs/wpf_like.svg";
 import Sejal from "../../assets/images/Subject 1.png";
-import Tooltip from "../../components/Tooltip";
 const FiveIconsCircle = () => {
   return (
     <div className="relative">
@@ -51,7 +50,7 @@ const FiveIconsCircle = () => {
       </div>
       <div className="w-14 h-14 left-2 top-28 absolute transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
         <div className="relative group">
-          <div className="absolute bottom-full mb-2 hidden w-28 bg-gray-800 text-white text-xs rounded py-2 px-3 group-hover:block">
+          <div className="absolute bottom-full mb-2 hidden w-28  bg-gray-800 text-white text-xs rounded py-2 px-3 group-hover:block">
             {"UX Research"}
           </div>
           {/* <Tooltip text="2+ years of experience"> */}
