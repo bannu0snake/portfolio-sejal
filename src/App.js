@@ -1,14 +1,14 @@
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Landing from "./pages/landing/Landing";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className="bg-neutral-950 w-full">
         <Landing />
         {/* <Work /> */}
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
