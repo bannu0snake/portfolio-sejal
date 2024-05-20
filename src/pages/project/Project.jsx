@@ -166,7 +166,7 @@ const projects = {
     bgColor: "teal-600",
     titleColor: "text-teal-600",
     textColor: "white",
-    link: "https://www.behance.net/gallery/156157763/DocTalk-Case-Study",
+    link: "https://drive.google.com/file/d/1el_aBbz_12WG_0VSv-tyRTYqppp8kkCe/view?usp=sharing",
   },
 };
 const Tag = ({ tag, bgColor, textColor }) => {
