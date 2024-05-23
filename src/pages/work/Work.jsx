@@ -78,17 +78,8 @@ const Work = () => {
     },
   ];
   return (
-    <div>
-      <div className="text-center text-stone-200 text-[4rem] font-normal font-pecita">
-        Work Experience
-      </div>
-      <div className="flex justify-center gap-16 py-36">
-        <img src={signzy} alt="" srcset="" />
-        <img src={samsung} alt="" srcset="" />
-        <img src={company3} alt="" srcset="" />
-        <img src={company4} alt="" srcset="" />
-      </div>
-      <div className="flex">
+    <div className="mt-2">
+      <div className="flex h-fit">
         {!selected ? (
           <div className="basis-1/2 bg-zinc-900 flex justify-center items-center text-white text-xl font-openSans">
             Hover on a project to view.
@@ -103,27 +94,22 @@ const Work = () => {
           </div>
         )}
         <div className="basis-1/2 flex flex-col pt-5">
-          <div className="text-stone-200 text-[64px] px-10 font-normal font-pecita">
-            Work
+          <div className="text-stone-200 text-5xl px-10 font-normal font-openSans pb-4">
+            My Work
           </div>
           {data.map(({ title, desc, key }) => (
             <Project title={title} desc={desc} id={key} />
           ))}
-          <div>
-            <div className="flex justify-end my-10 mr-10">
-              <div className="w-40 h-12 relative bg-red-400 rounded-full flex justify-end items-center">
-                <div className="text-white text-lg font-semibold font-openSans mx-auto">
-                  Lorme
-                </div>
-                <div className="w-11 h-11 bg-violet-50 rounded-full mr-1 flex justify-center items-center">
-                  <div className="w-2 h-2">
-                    <img src={Arrow} alt="" srcset="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+      </div>
+      <div className="text-center text-stone-200 text-[3rem] font-normal font-openSans mt-16">
+        Where I've Worked
+      </div>
+      <div className="flex justify-center gap-16 py-36">
+        <img src={signzy} alt="" srcset="" />
+        <img src={samsung} alt="" srcset="" />
+        <img src={company3} alt="" srcset="" />
+        <img src={company4} alt="" srcset="" />
       </div>
     </div>
   );

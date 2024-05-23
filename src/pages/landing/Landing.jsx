@@ -123,23 +123,41 @@ const Landing = () => {
         <div className="flex justify-between items-center border-b-[1px] py-12 border-gray-600">
           <div className="text-white text-[4rem]">Lets Connect </div>
           <div>
-            <div className="px-5 py-2.5 bg-red-400 rounded-[60px] justify-center items-center inline-flex">
+            {/* <div className="px-5 py-2.5 bg-red-400 rounded-[60px] justify-center items-center inline-flex">
               <div className="text-white text-2xl font-medium font-openSans">
                 Hire me
               </div>
               <div className="w-[42px] h-[42px]">
                 <img src={upRight} alt="" srcset="" />
               </div>
-            </div>{" "}
+            </div>{" "} */}
           </div>
         </div>
         <div className="py-9 flex border-b-[1px] border-gray-600">
           <div className="basis-1/2 text-white text-xl">
             Got a project? Let’s Talk
             <div className="flex my-2 gap-4">
-              <FaLinkedin className="h-8 w-8" />
-              <FaBehanceSquare className="h-8 w-8" />
-              <MdMail className="h-8 w-8" />
+              <FaLinkedin
+                className="h-8 w-8 cursor-pointer"
+                onClick={() => {
+                  window.open(
+                    "https://www.linkedin.com/in/sejal-vatta-557641205/",
+                    "_blank"
+                  );
+                }}
+              />
+              <FaBehanceSquare
+                className="h-8 w-8 cursor-pointer"
+                onClick={() => {
+                  window.open("https://www.behance.net/arshiazz", "_blank");
+                }}
+              />
+              <MdMail
+                className="h-8 w-8 cursor-pointer"
+                onClick={() => {
+                  window.open("mailto:sejalvatta7@gmail.com");
+                }}
+              />
             </div>
           </div>
           <div className="basis-1/2 flex justify-between">
@@ -171,8 +189,30 @@ const Landing = () => {
         <div className="py-9 flex justify-between">
           <div className="text-white">Copyright© 2024 All Rights Reserved.</div>
           <div className="text-white">
-            Designed By <span className="text-red-400">Sejal</span>, Developed
-            By <span className="text-red-400">Mahaboob</span>
+            Designed By{" "}
+            <span
+              className="text-red-400 cursor-pointer"
+              onClick={() => {
+                window.open(
+                  "https://www.linkedin.com/in/sejal-vatta-557641205/",
+                  "_blank"
+                );
+              }}
+            >
+              Sejal
+            </span>
+            , Developed By{" "}
+            <span
+              className="text-red-400 cursor-pointer"
+              onClick={() => {
+                window.open(
+                  "https://www.linkedin.com/in/mahaboobshaik-developer/",
+                  "_blank"
+                );
+              }}
+            >
+              Mahaboob
+            </span>
           </div>
         </div>
       </div>
