@@ -3,7 +3,7 @@ import Arrow from "../../assets/svgs/Arrow.svg";
 import FiveIconsCircle from "./FiveIconsCircle.jsx";
 import upRight from "../../assets/svgs/upRight.svg";
 import filled from "../../assets/svgs/filled.svg";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate, Link } from "react-router-dom";
 import About from "../about/About.jsx";
 import Work from "../work/Work.jsx";
 import { FaBehanceSquare, FaLinkedin } from "react-icons/fa";
@@ -12,7 +12,6 @@ import Project from "../project/Project.jsx";
 const fonts = ["font-play", "font-pecita", "font-pinyon"];
 const Info = () => {
   const [value, setValue] = useState(0);
-  const navigate = useNavigate();
   useEffect(() => {
     setTimeout(() => {
       // Update the value every second
@@ -49,10 +48,15 @@ const Info = () => {
             </span>
           </div>
           <div className="mt-20">
+            {/* <Link to="#work"> */}
             <div
               className="w-fit pl-3 h-12 relative bg-red-400 rounded-full flex justify-end items-center gap-2 cursor-pointer"
               onClick={() => {
-                navigate("/work");
+                window.scrollBy({
+                  top: window.innerHeight,
+                  left: 0,
+                  behavior: "smooth",
+                });
               }}
             >
               <div className="text-white text-lg font-semibold font-openSans mx-auto">
@@ -64,6 +68,7 @@ const Info = () => {
                 </div>
               </div>
             </div>
+            {/* </Link> */}
           </div>
         </div>
         <div className="mx-auto">
@@ -72,6 +77,9 @@ const Info = () => {
       </div>
       <div className="text-right italic font-openSans text-xl text-stone-200 font-semibold mr-20 mb-20">
         A designer by degree and choice
+      </div>
+      <div id="work">
+        <Work />
       </div>
     </div>
   );
@@ -99,8 +107,8 @@ const Landing = () => {
           </div>
         </div>
         <div className="text-white flex justify-end gap-10 font-openSans text-base font-semibold">
-          <div>
-            <a href="/work">Work</a>
+          <div className="cursor-pointer">
+            <a href="/">Home</a>
           </div>
           <div>
             <a href="/about">About</a>
@@ -116,14 +124,14 @@ const Landing = () => {
         <Route path="*" element={<Info />} />
         <Route path="/about" element={<About />} />
         <Route path="/work" element={<Work />} />
-        <Route path="/resume" element={<Work />} />
         <Route path="/project" element={<Project />} />
       </Routes>
-      <div className="flex flex-col bg-zinc-800 rounded-t-xl px-24">
-        <div className="flex justify-between items-center border-b-[1px] py-12 border-gray-600">
-          <div className="text-white text-[4rem]">Lets Connect </div>
-          <div>
-            {/* <div className="px-5 py-2.5 bg-red-400 rounded-[60px] justify-center items-center inline-flex">
+      <div className="">
+        <div className="flex flex-col bg-zinc-800 rounded-t-xl px-24">
+          <div className="flex justify-between items-center border-b-[1px] py-12 border-gray-600">
+            <div className="text-white text-[4rem]">Lets Connect </div>
+            <div>
+              {/* <div className="px-5 py-2.5 bg-red-400 rounded-[60px] justify-center items-center inline-flex">
               <div className="text-white text-2xl font-medium font-openSans">
                 Hire me
               </div>
@@ -131,88 +139,91 @@ const Landing = () => {
                 <img src={upRight} alt="" srcset="" />
               </div>
             </div>{" "} */}
+            </div>
           </div>
-        </div>
-        <div className="py-9 flex border-b-[1px] border-gray-600">
-          <div className="basis-1/2 text-white text-xl">
-            Got a project? Let’s Talk
-            <div className="flex my-2 gap-4">
-              <FaLinkedin
-                className="h-8 w-8 cursor-pointer"
+          <div className="py-9 flex border-b-[1px] border-gray-600">
+            <div className="basis-1/2 text-white text-xl">
+              Got a project? Let’s Talk
+              <div className="flex my-2 gap-4">
+                <FaLinkedin
+                  className="h-8 w-8 cursor-pointer"
+                  onClick={() => {
+                    window.open(
+                      "https://www.linkedin.com/in/sejal-vatta-557641205/",
+                      "_blank"
+                    );
+                  }}
+                />
+                <FaBehanceSquare
+                  className="h-8 w-8 cursor-pointer"
+                  onClick={() => {
+                    window.open("https://www.behance.net/arshiazz", "_blank");
+                  }}
+                />
+                <MdMail
+                  className="h-8 w-8 cursor-pointer"
+                  onClick={() => {
+                    window.open("mailto:sejalvatta7@gmail.com");
+                  }}
+                />
+              </div>
+            </div>
+            <div className="basis-1/2 flex justify-between">
+              <div className="flex flex-col gap-2">
+                <div className="text-red-400 text-xl mb-2">Navigation</div>
+                <div className="text-white">Home</div>
+                <div className="text-white">About Me</div>
+                <div className="text-white">Resume</div>
+              </div>
+              <div className="flex flex-col gap-2">
+                <div className="text-red-400 text-xl mb-2">Contact</div>
+                <div className="text-white">sejalvatta7@gmail.com</div>
+                <div className="text-white">www.sejal-portfolio.in</div>
+              </div>
+              <div className="flex flex-row h-fit">
+                <input
+                  className="p-2 rounded-l-lg"
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Email Address"
+                />
+                <div className="bg-red-400 flex justify-center items-center p-2 rounded-r-lg">
+                  <img src={filled} alt="" srcset="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="py-9 flex justify-between">
+            <div className="text-white">
+              Copyright© 2024 All Rights Reserved.
+            </div>
+            <div className="text-white">
+              Designed By{" "}
+              <span
+                className="text-red-400 cursor-pointer"
                 onClick={() => {
                   window.open(
                     "https://www.linkedin.com/in/sejal-vatta-557641205/",
                     "_blank"
                   );
                 }}
-              />
-              <FaBehanceSquare
-                className="h-8 w-8 cursor-pointer"
+              >
+                Sejal
+              </span>
+              , Developed By{" "}
+              <span
+                className="text-red-400 cursor-pointer"
                 onClick={() => {
-                  window.open("https://www.behance.net/arshiazz", "_blank");
+                  window.open(
+                    "https://www.linkedin.com/in/mahaboobshaik-developer/",
+                    "_blank"
+                  );
                 }}
-              />
-              <MdMail
-                className="h-8 w-8 cursor-pointer"
-                onClick={() => {
-                  window.open("mailto:sejalvatta7@gmail.com");
-                }}
-              />
+              >
+                Mahaboob
+              </span>
             </div>
-          </div>
-          <div className="basis-1/2 flex justify-between">
-            <div className="flex flex-col gap-2">
-              <div className="text-red-400 text-xl mb-2">Navigation</div>
-              <div className="text-white">Home</div>
-              <div className="text-white">About Me</div>
-              <div className="text-white">Resume</div>
-            </div>
-            <div className="flex flex-col gap-2">
-              <div className="text-red-400 text-xl mb-2">Contact</div>
-              <div className="text-white">sejalvatta7@gmail.com</div>
-              <div className="text-white">www.sejal-portfolio.in</div>
-            </div>
-            <div className="flex flex-row h-fit">
-              <input
-                className="p-2 rounded-l-lg"
-                type="text"
-                name="email"
-                id="email"
-                placeholder="Email Address"
-              />
-              <div className="bg-red-400 flex justify-center items-center p-2 rounded-r-lg">
-                <img src={filled} alt="" srcset="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="py-9 flex justify-between">
-          <div className="text-white">Copyright© 2024 All Rights Reserved.</div>
-          <div className="text-white">
-            Designed By{" "}
-            <span
-              className="text-red-400 cursor-pointer"
-              onClick={() => {
-                window.open(
-                  "https://www.linkedin.com/in/sejal-vatta-557641205/",
-                  "_blank"
-                );
-              }}
-            >
-              Sejal
-            </span>
-            , Developed By{" "}
-            <span
-              className="text-red-400 cursor-pointer"
-              onClick={() => {
-                window.open(
-                  "https://www.linkedin.com/in/mahaboobshaik-developer/",
-                  "_blank"
-                );
-              }}
-            >
-              Mahaboob
-            </span>
           </div>
         </div>
       </div>

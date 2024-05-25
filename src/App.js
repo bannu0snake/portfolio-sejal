@@ -1,5 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import Landing from "./pages/landing/Landing";
+import { LuSmile } from "react-icons/lu";
 import gif from "./assets/images/Animation - 1716311024659.gif";
 function App() {
   return (
@@ -13,10 +14,10 @@ function App() {
         </BrowserRouter>
       </div>
       <div className="bg-neutral-950 w-full h-[100vh] md:hidden">
-        <div className="text-white mx-auto">
-          <img src={gif} alt="" className="h-5rem w-[100%]" />
-          <div className="text-center font-rubik text-xl mx-4">
-            Veiw in Desktop for better experince
+        <div className="text-white flex flex-col items-center gap-4 h-full pt-[20%]">
+          <LuSmile className="h-16 w-16" />
+          <div className="text-center font-rubik text-lg mx-4">
+            Visit me on larger screen
           </div>
         </div>
       </div>
