@@ -8,7 +8,7 @@ import Sejal from "../../assets/images/Subject 1.png";
 const FiveIconsCircle = () => {
   return (
     <div className="relative">
-      <div className="w-14 h-14 right-2 bottom-0 absolute transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
+      <div className="w-14 h-14 right-2 bottom-6 absolute transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
         <div className="relative group">
           <div className="absolute bottom-full mb-2 hidden w-[156px] bg-gray-800 text-white text-xs rounded py-2 px-3 group-hover:block">
             2+ years of experience
@@ -28,7 +28,7 @@ const FiveIconsCircle = () => {
           {/* </Tooltip> */}
         </div>
       </div>
-      <div className="w-14 h-14 left-2 bottom-0 absolute transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
+      <div className="w-14 h-14 left-2 bottom-6 absolute transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
         <div className="relative group">
           <div className="absolute bottom-full mb-2 hidden w-fit bg-gray-800 text-white text-xs rounded py-2 px-3 group-hover:block">
             Signzy
@@ -38,7 +38,7 @@ const FiveIconsCircle = () => {
           {/* </Tooltip> */}
         </div>
       </div>
-      <div className="w-14 h-14 right-2 top-28 absolute transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
+      <div className="w-14 h-14 right-0 top-24 absolute transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
         <div className="relative group">
           <div className="absolute bottom-full mb-2 hidden w-fit bg-gray-800 text-white text-xs rounded py-2 px-3 group-hover:block">
             Bengaluru
@@ -48,7 +48,7 @@ const FiveIconsCircle = () => {
           {/* </Tooltip> */}
         </div>
       </div>
-      <div className="w-14 h-14 left-2 top-28 absolute transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
+      <div className="w-14 h-14 left-0 top-24 absolute transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
         <div className="relative group">
           <div className="absolute bottom-full mb-2 hidden w-28  bg-gray-800 text-white text-xs rounded py-2 px-3 group-hover:block">
             {"UX Research"}
@@ -58,8 +58,8 @@ const FiveIconsCircle = () => {
           {/* </Tooltip> */}
         </div>
       </div>
-      <div className="m-20 h-80 w-80 bg-[#CACACA] rounded-full mt-16 relative">
-        <img className="mx-auto" src={Sejal} alt="" srcset="" />
+      <div className="m-10 h-56 w-56 md:h-80 md:w-80  bg-[#CACACA] rounded-full mt-12 mx-12 relative">
+        <img className="mx-auto h-56" src={Sejal} alt="" srcset="" />
       </div>
     </div>
   );

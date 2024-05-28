@@ -40,7 +40,7 @@ const Work = () => {
             <img src={Arrow1} alt="" srcset="" className="text-white" />
           </div>
         ) : (
-          <div className="text-white flex flex-col gap-3 border-b-[1px] border-stone-700 px-10 py-5 h-36">
+          <div className="text-white flex flex-col gap-3 border-b-[1px] border-stone-700 px-10 py-5 h-fit md:h-36">
             <div className="text-xl font-semibold font-openSans">{title}</div>
             <div className="text-stone-300 text-xs font-normal font-openSans">
               {desc}
@@ -81,11 +81,11 @@ const Work = () => {
     <div className="mt-2">
       <div className="flex h-fit">
         {!selected ? (
-          <div className="basis-1/2 bg-zinc-900 flex justify-center items-center text-white text-xl font-openSans">
+          <div className="basis-1/2 bg-zinc-900 justify-center items-center text-white text-xl font-openSans hidden md:flex">
             Hover on a project to view.
           </div>
         ) : (
-          <div className="basis-1/2">
+          <div className="basis-1/2  hidden md:block">
             {selected === "HIDDEN_LAYERS" && <Project1 />}
             {selected === "SUB_SPACE" && <Project2 />}
             {selected === "ONEDRIVE_REDISIGN" && <Project3 />}
@@ -93,7 +93,7 @@ const Work = () => {
             {selected === "WASTE_MANAGEMENT" && <Project5 />}
           </div>
         )}
-        <div className="basis-1/2 flex flex-col pt-5">
+        <div className="md:basis-1/2 flex flex-col pt-5">
           <div className="text-stone-200 text-5xl px-10 font-normal font-openSans pb-4">
             My Work
           </div>
@@ -102,14 +102,38 @@ const Work = () => {
           ))}
         </div>
       </div>
-      <div className="text-center text-stone-200 text-[3rem] font-normal font-openSans mt-16">
-        Where I've Worked
-      </div>
-      <div className="flex justify-center gap-16 py-36">
-        <img src={signzy} alt="" srcset="" />
-        <img src={samsung} alt="" srcset="" />
-        <img src={company3} alt="" srcset="" />
-        <img src={company4} alt="" srcset="" />
+      <div className="">
+        <div className="text-center text-stone-200 text-xl md:text-[3rem] font-normal font-openSans mt-8 md:mt-16">
+          Where I've Worked
+        </div>
+        <div className="">
+          <div className="flex justify-center items-center gap-2 md:gap-16 py-8 md:py-36 mx-4 md:mx-16">
+            <img
+              src={signzy}
+              alt=""
+              srcset=""
+              className="h-16 w-16 md:h-full md:w-full"
+            />
+            <img
+              src={samsung}
+              alt=""
+              srcset=""
+              className="h-16 w-16 md:h-full md:w-full"
+            />
+            <img
+              src={company3}
+              alt=""
+              srcset=""
+              className="h-16 w-16 md:h-full md:w-full"
+            />
+            <img
+              src={company4}
+              alt=""
+              srcset=""
+              className="h-16 w-16 md:h-full md:w-full"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

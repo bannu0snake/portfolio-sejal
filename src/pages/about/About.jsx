@@ -1,120 +1,318 @@
 import React from "react";
+import memoji from "../../assets/images/1eaaefc0c081df076f8e699aaaf3155d-sticker 1.png";
+import pointer from "../../assets/svgs/pointer.svg";
+import signzy from "../../assets/svgs/Group 224.svg";
+import samsung from "../../assets/companies/image 1.svg";
+import company3 from "../../assets/companies/image 3.svg";
+import company4 from "../../assets/companies/image 2.svg";
+import company5 from "../../assets/companies/Saaspect_Logo_White.png";
+const Full = () => {
+  return (
+    <div className="h-5 w-8 bg-red-400 rounded-3xl border-[1px] border-red-400"></div>
+  );
+};
+const Empty = () => {
+  return (
+    <div className="h-5 w-8 rounded-3xl border-[1px] border-red-400"></div>
+  );
+};
+
+const Half = () => {
+  return (
+    <div className="flex">
+      <div className="h-5 w-4 bg-red-400 rounded-l-3xl border-[1px] border-red-400"></div>
+      <div className="h-5 w-4 rounded-r-3xl border-[1px] border-red-400"></div>
+    </div>
+  );
+};
+
+const WorkItem = ({ role, desc, logo, timeline }) => {
+  return (
+    <div className="p-8 rounded-md bg-zinc-900 grid grid-cols-10 grid-flow-row gap-4">
+      <div className="col-span-3">
+        <img src={logo} alt="" className="w-3/4 h-1/2" />
+      </div>
+      <div className="col-span-5">
+        <div className="text-gray-50 text-xl font-semibold font-openSans leading-7">
+          {role}
+        </div>
+        <div className="mt-4 font-openSans font-normal text-gray-300">
+          {desc}
+        </div>
+      </div>
+      <div className="col-span-2 text-gray-200 text-end">{timeline}</div>
+    </div>
+  );
+};
 
 const About = () => {
   return (
-    <div className="my-16">
-      <div className="text-white mx-24">
-        <div className="mb-2 font-thin text-xl font-play text-gray-400">
-          HEY THERE
+    <div className="my-16 mx-36 mt-24">
+      <div className="flex flex-col md:flex-row gap-28">
+        <div className="bg-red-400 w-56 h-56 md:w-72 md:h-72  rounded-full mt-8">
+          <img
+            src={memoji}
+            alt=""
+            srcset=""
+            className="w-48 h-48 md:w-64 md:h-64 mx-auto"
+          />
         </div>
-        <div className="font-semibold text-3xl mb-2 font-openSans">
-          I'm Sejal,
+        <div className="flex flex-col w-2/3">
+          <div className=" text-white text-4xl font-semibold font-openSans leading-[52px]">
+            I’m Sejal
+          </div>
+          <div className=" text-white text-base font-normal font-openSans leading-snug mt-5">
+            A passionate User Experience (UX) Designer with a Bachelor's degree
+            in Design (User Experience Design) from the MIT Institute of Design,
+            Pune, completed in 2023. Over the past few years, I have honed my
+            skills and deepened my passion for user-centric design through
+            various internships and projects. I am driven by a desire to solve
+            meaningful problems and improve people's lives through intuitive and
+            impactful design solutions.
+          </div>
+          <div className="justify-start items-start gap-20 inline-flex py-8 border-y-[1px] border-y-red-400 mt-8">
+            <div className="flex-col justify-start items-start gap-2 inline-flex">
+              <div className="w-[78px] text-white text-4xl font-semibold font-openSans leading-[52px]">
+                2+
+              </div>
+              <div className=" text-white text-xl font-normal font-openSans leading-snug">
+                Years of Experience
+              </div>
+            </div>
+            <div className="flex-col justify-start items-end gap-2 inline-flex">
+              <div className=" text-white text-4xl font-semibold font-openSans leading-[52px]">
+                10+
+              </div>
+              <div className=" text-white text-xl font-normal font-openSans leading-snug">
+                Projects{" "}
+              </div>
+            </div>
+            <div className="flex-col justify-start items-start gap-2 inline-flex">
+              <div className=" text-white text-5xl font-semibold font-openSans leading-[52px]">
+                5
+              </div>
+              <div className=" text-white text-xl font-normal font-openSans leading-snug">
+                Companies worked at
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="mb-4">
-          a passionate User Experience (UX) Designer with a Bachelor's degree in
-          Design (User Experience Design) from the MIT Institute of Design,
-          Pune, completed in 2023. Over the past few years, I have honed my
-          skills and deepened my passion for user-centric design through various
-          internships and projects. I am driven by a desire to solve meaningful
-          problems and improve people's lives through intuitive and impactful
-          design solutions.
+      </div>
+      <div className="mt-32 flex flex-col justify-center items-center">
+        <div className="px-5 py-1 bg-zinc-900 rounded-xl w-fit text-gray-300 text-sm font-normal font-openSans leading-tight">
+          My Top Skills
         </div>
-        <div className="font-semibold text-3xl mb-2 font-openSans">
-          Educational Journey
+        <div className="grid grid-cols-2  md:grid-cols-5 grid-flow-row gap-4 my-8">
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+            <div className="justify-start items-center gap-4 inline-flex">
+              <img src={pointer} alt="" srcset="" />
+              <div className="text-white text-sm font-normal font-openSans leading-tight">
+                User Experience
+              </div>
+            </div>
+            <div className="justify-start items-center gap-1 inline-flex">
+              <Full />
+              <Full />
+              <Full />
+              <Full />
+              <Half />
+            </div>
+          </div>
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+            <div className="justify-start items-center gap-4 inline-flex">
+              <img src={pointer} alt="" srcset="" />
+              <div className="text-white text-sm font-normal font-openSans leading-tight">
+                Design Thinking
+              </div>
+            </div>
+            <div className="justify-start items-center gap-1 inline-flex">
+              <Full />
+              <Full />
+              <Full />
+              <Full />
+              <Half />
+            </div>
+          </div>
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+            <div className="justify-start items-center gap-4 inline-flex">
+              <img src={pointer} alt="" srcset="" />
+              <div className="text-white text-sm font-normal font-openSans leading-tight">
+                User Research
+              </div>
+            </div>
+            <div className="justify-start items-center gap-1 inline-flex">
+              <Full />
+              <Full />
+              <Full />
+              <Full />
+              <Half />
+            </div>
+          </div>
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+            <div className="justify-start items-center gap-4 inline-flex">
+              <img src={pointer} alt="" srcset="" />
+              <div className="text-white text-sm font-normal font-openSans leading-tight">
+                Prototyping
+              </div>
+            </div>
+            <div className="justify-start items-center gap-1 inline-flex">
+              <Full />
+              <Full />
+              <Full />
+              <Full />
+              <Half />
+            </div>
+          </div>
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+            <div className="justify-start items-center gap-4 inline-flex">
+              <img src={pointer} alt="" srcset="" />
+              <div className="text-white text-sm font-normal font-openSans leading-tight">
+                Storytelling
+              </div>
+            </div>
+            <div className="justify-start items-center gap-1 inline-flex">
+              <Full />
+              <Full />
+              <Full />
+              <Full />
+              <Half />
+            </div>
+          </div>
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+            <div className="justify-start items-center gap-4 inline-flex">
+              <img src={pointer} alt="" srcset="" />
+              <div className="text-white text-sm font-normal font-openSans leading-tight">
+                Usability Testing
+              </div>
+            </div>
+            <div className="justify-start items-center gap-1 inline-flex">
+              <Full />
+              <Full />
+              <Full />
+              <Full />
+              <Half />
+            </div>
+          </div>
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+            <div className="justify-start items-center gap-4 inline-flex">
+              <img src={pointer} alt="" srcset="" />
+              <div className="text-white text-sm font-normal font-openSans leading-tight">
+                Wireframing
+              </div>
+            </div>
+            <div className="justify-start items-center gap-1 inline-flex">
+              <Full />
+              <Full />
+              <Full />
+              <Full />
+              <Empty />
+            </div>
+          </div>
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+            <div className="justify-start items-center gap-4 inline-flex">
+              <img src={pointer} alt="" srcset="" />
+              <div className="text-white text-sm font-normal font-openSans leading-tight">
+                Service Design
+              </div>
+            </div>
+            <div className="justify-start items-center gap-1 inline-flex">
+              <Full />
+              <Full />
+              <Full />
+              <Half />
+              <Empty />
+            </div>
+          </div>
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+            <div className="justify-start items-center gap-4 inline-flex">
+              <img src={pointer} alt="" srcset="" />
+              <div className="text-white text-sm font-normal font-openSans leading-tight">
+                Interaction Design
+              </div>
+            </div>
+            <div className="justify-start items-center gap-1 inline-flex">
+              <Full />
+              <Full />
+              <Full />
+              <Half />
+              <Empty />
+            </div>
+          </div>
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+            <div className="justify-start items-center gap-4 inline-flex">
+              <img src={pointer} alt="" srcset="" />
+              <div className="text-white text-sm font-normal font-openSans leading-tight">
+                UX Writing
+              </div>
+            </div>
+            <div className="justify-start items-center gap-1 inline-flex">
+              <Full />
+              <Full />
+              <Full />
+              <Empty />
+              <Empty />
+            </div>
+          </div>
         </div>
-        <div className="mb-2">
-          During my time at the MIT Institute of Design, I immersed myself in
-          diverse aspects of UX design. My coursework included in-depth studies
-          in:{" "}
+      </div>
+      <div className="mt-32 flex flex-col justify-center items-center">
+        <div className="px-5 py-1 bg-zinc-900 rounded-xl w-fit text-gray-300 text-sm font-normal font-openSans leading-tight">
+          My Top Skills
         </div>
-        <div className="ml-4 mb-4">
-          <li>
-            <span className="font-semibold">User Research Methods:</span>{" "}
-            Learning how to gather and analyze user data effectively.
-          </li>
-          <li>
-            <span className="font-semibold">Thinking:</span> Design Applying
-            innovative approaches to solve complex design challenges.
-          </li>
-          <li>
-            <span className="font-semibold">Information Architecture:</span>{" "}
-            Structuring information to support usability and findability.
-          </li>
+        <div className="text-center text-gray-300 text-base font-normal font-openSans leading-7 mt-2">
+          Here is a quick summary of my most recent experiences:
         </div>
-        <div className="font-semibold text-3xl mb-2 font-openSans">
-          Service Design Specialization
-        </div>
-        <div className="mb-2">
-          I had the unique opportunity to learn Service Design from Prof. Birgit
-          Mager, the first professor in the field, at the Köln Institute of
-          Design, Germany. This exchange semester enriched my understanding of:
-        </div>
-        <div className="mb-4">
-          <li>
-            <span className="font-semibold">Service Blueprinting: </span>{" "}
-            Mapping out service processes to identify key touchpoints.
-          </li>
-          <li>
-            <span className="font-semibold">Holistic Design Approaches: </span>{" "}
-            Holistic Design Approaches: Integrating user experience across
-            various service channels.
-          </li>
-          <li>
-            <span className="font-semibold">
-              Cross-cultural Design Perspectives:
-            </span>{" "}
-            Understanding how cultural contexts influence design.
-          </li>
-        </div>
-        <div className="font-semibold text-3xl mb-2 font-openSans">
-          My Learnings and Skills
-        </div>
-        <div className="font-medium text-xl mb-2 font-openSans">
-          Core Competencies
-        </div>
-        <div className="mb-4">
-          <li>
-            <span className="font-semibold">User Research:</span> Proficient in
-            conducting interviews, surveys, and usability tests.
-          </li>
-          <li>
-            <span className="font-semibold">UX Design:</span> Skilled in
-            creating wireframes, prototypes, and user flows.
-          </li>
-          <li>
-            <span className="font-semibold">Problem Solving:</span> Adept at
-            using design thinking to tackle complex challenges.
-          </li>
-          <li>
-            <span className="font-semibold">Design Thinking:</span> Experienced
-            in facilitating workshops and brainstorming sessions.
-          </li>
-        </div>
-        <div className="font-medium text-xl mb-2 font-openSans">
-          Technical Skills
-        </div>
-        <div className="mb-4">
-          <li>
-            <span className="font-semibold">Information Architecture:</span>{" "}
-            Expert in organizing and structuring information effectively.
-          </li>
-          <li>
-            <span className="font-semibold">Attention to Detail:</span>{" "}
-            Meticulous in ensuring design accuracy and consistency.
-          </li>
-          <li>
-            <span className="font-semibold">Service Design:</span> Competent in
-            designing and optimizing service experiences.
-          </li>
-          <li>
-            <span className="font-semibold">Design Thinking:</span> Focused on
-            creating intuitive and engaging user interactions.
-          </li>
-        </div>
-
-        <div className="mx-auto font-play ">
-          Contact Feel free to connect with me for collaboration or inquiries.
-          Let's design solutions that make a difference!
+        <div className="flex flex-col gap-12 mt-12">
+          <WorkItem
+            desc={`As a Product Designer at Signzy, I conduct user
+                research, design wireframes and prototypes, and collaborate with
+                cross-functional teams in an agile environment. My goal is to
+                enhance user satisfaction and drive product adoption by
+                addressing real business needs.`}
+            logo={signzy}
+            timeline={"Aug 2023 - Present"}
+            role={"Product Designer"}
+          />
+          <WorkItem
+            desc={`Led the design and usability testing of parking feature in their
+                flagship Maruti Suzuki Connect app.`}
+            logo={company4}
+            timeline={"Feb 2023 - June 2023"}
+            role={"User Experience Designer"}
+          />
+          <WorkItem
+            desc={`Promoted User Centered Design, developed AI and Blockchain
+                Fintech onboarding solutions, and collaborated on user flows and
+                prototypes, while also leading design direction and methodology.`}
+            logo={signzy}
+            timeline={"Sept 2021 - Feb 2022"}
+            role={"Product Design Intern"}
+          />
+          <WorkItem
+            desc={`Contributed to all design phases for Samsung Finance+, defining
+                research questions, selecting data collection methods, and
+                performing primarily qualitative user research for financing
+                options on Samsung Galaxy devices.`}
+            logo={samsung}
+            timeline={"Nov 2021 - Jan 2021"}
+            role={"User Research Intern"}
+          />
+          <WorkItem
+            desc={`Worked on UI/UX for software products, driving design direction
+                and usability, and delivering innovative solutions that meet
+                user and business goals.`}
+            logo={company5}
+            timeline={"Jul 2021 - Aug 2021"}
+            role={"UX/UI Intern"}
+          />
+          <WorkItem
+            desc={`Collaborated with product managers and developers to create
+                interactive mobile app designs, translating consumer behavior
+                into efficient UI.`}
+            logo={company3}
+            timeline={"May 2021 - June 2021"}
+            role={"User Experience Designer"}
+          />
         </div>
       </div>
     </div>

@@ -9,6 +9,7 @@ import Work from "../work/Work.jsx";
 import { FaBehanceSquare, FaLinkedin } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 import Project from "../project/Project.jsx";
+import HamburgerMenu from "../../components/HamburgerMenu";
 const fonts = ["font-play", "font-pecita", "font-pinyon"];
 const Info = () => {
   const [value, setValue] = useState(0);
@@ -23,31 +24,38 @@ const Info = () => {
   }, [value]);
   return (
     <div>
-      <div className="flex flex-row ml-24 my-24">
+      <div className="flex flex-col md:flex-row ml-4 md:ml-24 mt-12 md:my-24">
         <div className="basis-1/2">
-          <div className="font-pecita text-6xl text-stone-200 ">Hey!</div>
+          <div className="font-pecita text-4xl md:text-6xl text-stone-200 ">
+            Hey!
+          </div>
           <div className="my-8">
-            <span className="text-stone-200 text-5xl font-semibold font-openSans leading-4">
+            <span className="text-stone-200 text-xl md:text-5xl font-semibold font-openSans leading-4">
               This is{" "}
             </span>
-            <span className="text-red-400 text-5xl font-semibold font-openSans leading-4">
+            <span className="text-red-400 text-xl md:text-5xl font-semibold font-openSans leading-4">
               Sejal
             </span>
-            <span className="text-stone-200 text-5xl font-semibold font-openSans">
+            <span className="text-stone-200 text-xl md:text-5xl font-semibold font-openSans">
               , a{" "}
             </span>
             <span
-              className={`text-stone-200 text-5xl font-normal ${fonts[value]} leading-4`}
+              className={`text-stone-200 font-normal ${fonts[value]} leading-4 text-5xl hidden md:inline-block`}
             >
-              <div className="w-48 inline-block">{`Designer`}</div>
+              <div className="w-48 hidden md:inline-block">{`Designer`}</div>
             </span>
-            <span className="text-stone-200 text-5xl font-semibold font-font-openSans">
+            <span
+              className={`text-stone-200 font-normal ${fonts[value]} leading-4 text-xl inline-block md:hidden`}
+            >
+              <div className="w-20 md:hidden inline-block">{`Designer`}</div>
+            </span>
+            <span className="text-stone-200 text-xl md:text-5xl font-semibold font-font-openSans">
               {" "}
               on a mission to make your online presence stand out in a crowded
               digital landscape.
             </span>
           </div>
-          <div className="mt-20">
+          <div className="mt-4 md:mt-20 hidden md:block">
             {/* <Link to="#work"> */}
             <div
               className="w-fit pl-3 h-12 relative bg-red-400 rounded-full flex justify-end items-center gap-2 cursor-pointer"
@@ -71,13 +79,14 @@ const Info = () => {
             {/* </Link> */}
           </div>
         </div>
-        <div className="mx-auto">
+        <div className="mx-auto flex md:items-end scale-75 md:scale-100">
           <FiveIconsCircle />
         </div>
       </div>
-      <div className="text-right italic font-openSans text-xl text-stone-200 font-semibold mr-20 mb-20">
+      <div className="text-center md:text-right italic font-openSans md:text-xl text-stone-200 font-semibold mb-20 text-base mr-1 md:mr-12">
         A designer by degree and choice
       </div>
+
       <div id="work">
         <Work />
       </div>
@@ -92,31 +101,34 @@ const Landing = () => {
     window.open(pdfUrl, "_blank");
   };
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-row justify-between mx-24 mt-10 py-1">
+    <div className="flex flex-col w-full">
+      <div className="flex flex-row justify-between mx-4 md:mx-24 md:mt-10 mt-5 py-1">
         <div
           onClick={() => {
             navigate("/");
           }}
           className="flex flex-row gap-3 cursor-pointer"
         >
-          <div className="bg-white w-[5rem] h-full rounded-r-full"></div>
+          <div className="bg-white w-[5rem] h-8 rounded-r-full"></div>
           <div className="flex flex-col text-white items-start justify-start leading-[80%] gap-1 text-base font-semibold font-openSans">
             <p>Sejal</p>
             <p>Vatta</p>
           </div>
         </div>
-        <div className="text-white flex justify-end gap-10 font-openSans text-base font-semibold">
-          <div className="cursor-pointer">
+        <div className="text-white hidden md:flex justify-end gap-2 md:gap-10 font-openSans md:text-base text-xs font-semibold">
+          <div className="cursor-pointer ">
             <a href="/">Home</a>
           </div>
-          <div>
+          <div className="">
             <a href="/about">About</a>
           </div>
           {/* <div>Blog</div> */}
-          <div onClick={openPdf} className="cursor-pointer">
+          <div onClick={openPdf} className="cursor-pointer ">
             Resume
           </div>
+        </div>
+        <div className="block md:hidden">
+          <HamburgerMenu />
         </div>
       </div>
 
@@ -126,7 +138,7 @@ const Landing = () => {
         <Route path="/work" element={<Work />} />
         <Route path="/project" element={<Project />} />
       </Routes>
-      <div className="">
+      <div className="hidden md:block">
         <div className="flex flex-col bg-zinc-800 rounded-t-xl px-24">
           <div className="flex justify-between items-center border-b-[1px] py-12 border-gray-600">
             <div className="text-white text-[4rem]">Lets Connect </div>
