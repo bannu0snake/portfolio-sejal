@@ -1,7 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
 import Landing from "./pages/landing/Landing";
-import { LuSmile } from "react-icons/lu";
-import gif from "./assets/images/Animation - 1716311024659.gif";
 function App() {
   return (
     <>

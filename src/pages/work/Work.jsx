@@ -4,7 +4,6 @@ import Arrow1 from "../../assets/svgs/Group.svg";
 import samsung from "../../assets/svgs/image 1.svg";
 import company3 from "../../assets/svgs/image 2.svg";
 import company4 from "../../assets/svgs/image 3.svg";
-import Arrow from "../../assets/svgs/Arrow.svg";
 import { useNavigate } from "react-router-dom";
 import Project1 from "../ProjectOveriviews/Project1";
 import Project2 from "../ProjectOveriviews/Project2";

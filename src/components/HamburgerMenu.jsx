@@ -31,23 +31,27 @@ const HamburgerMenu = () => {
         } md:block mt-4 absolute right-0`}
       >
         <a
-          href="#"
+          href="/"
           className="block px-2 py-1 bg-slate-600 text-base text-white"
         >
           Home
         </a>
         <a
-          href="#"
+          href="/about"
           className="block px-2 py-1 bg-slate-600 text-base text-white"
         >
           About
         </a>
-        <a
-          href="#"
+        <div
+          onClick={() => {
+            const pdfUrl =
+              "https://drive.google.com/file/d/1exxL5ke3vikNP2TMVwfK3Vy_OIBpiSGY/view"; // Replace with your PDF URL
+            window.open(pdfUrl, "_blank");
+          }}
           className="block px-2 py-1 bg-slate-600 text-base text-white"
         >
           Resume
-        </a>
+        </div>
       </div>
     </div>
   );

@@ -8,47 +8,65 @@ import company4 from "../../assets/companies/image 2.svg";
 import company5 from "../../assets/companies/Saaspect_Logo_White.png";
 const Full = () => {
   return (
-    <div className="h-5 w-8 bg-red-400 rounded-3xl border-[1px] border-red-400"></div>
+    <div className="h-4 md:h-5 w-6 md:w-8 bg-red-400 rounded-3xl border-[1px] border-red-400"></div>
   );
 };
 const Empty = () => {
   return (
-    <div className="h-5 w-8 rounded-3xl border-[1px] border-red-400"></div>
+    <div className="h-4 md:h-5 w-6 md:w-8 rounded-3xl border-[1px] border-red-400"></div>
   );
 };
 
 const Half = () => {
   return (
     <div className="flex">
-      <div className="h-5 w-4 bg-red-400 rounded-l-3xl border-[1px] border-red-400"></div>
-      <div className="h-5 w-4 rounded-r-3xl border-[1px] border-red-400"></div>
+      <div className="h-4 md:h-5 w-3 md:w-4 bg-red-400 rounded-l-3xl border-[1px] border-red-400"></div>
+      <div className="h-4 md:h-5 w-3 md:w-4 rounded-r-3xl border-[1px] border-red-400"></div>
     </div>
   );
 };
 
 const WorkItem = ({ role, desc, logo, timeline }) => {
   return (
-    <div className="p-8 rounded-md bg-zinc-900 grid grid-cols-10 grid-flow-row gap-4">
-      <div className="col-span-3">
-        <img src={logo} alt="" className="w-3/4 h-1/2" />
+    <>
+      <div className="p-8 rounded-md bg-zinc-900  grid-cols-10 grid-flow-row gap-4 hidden md:grid">
+        <div className="col-span-3">
+          <img src={logo} alt="" className="w-3/4 h-1/2" />
+        </div>
+        <div className="col-span-5">
+          <div className="text-gray-50 text-xl font-semibold font-openSans leading-7">
+            {role}
+          </div>
+          <div className="mt-4 font-openSans font-normal text-gray-300">
+            {desc}
+          </div>
+        </div>
+        <div className="col-span-2 text-gray-200 text-end">{timeline}</div>
       </div>
-      <div className="col-span-5">
-        <div className="text-gray-50 text-xl font-semibold font-openSans leading-7">
+      <div className="flex flex-col gap-4 items-start md:hidden bg-zinc-900 p-8">
+        <div className="">
+          <img src={logo} alt="" className="w-3/4 h-full" />
+        </div>
+        <div className="text-gray-200 text-base font-normal font-openSans leading-normal">
+          {timeline}
+        </div>
+        <div className="text-gray-50 text-xl font-semibold font-['Open Sans'] leading-7">
           {role}
         </div>
-        <div className="mt-4 font-openSans font-normal text-gray-300">
-          {desc}
+        <div className="text-gray-300 text-base font-normal font-['Open Sans'] leading-normal">
+          Worked on UI/UX for software products, driving design direction and
+          usability, and delivering innovative solutions that meet user and
+          business goals.
         </div>
       </div>
-      <div className="col-span-2 text-gray-200 text-end">{timeline}</div>
-    </div>
+    </>
   );
 };
 
 const About = () => {
   return (
-    <div className="my-16 mx-36 mt-24">
-      <div className="flex flex-col md:flex-row gap-28">
+    <div className="my-16 mx-4 md:mx-36 mt-24">
+      <div className="flex flex-col md:flex-row gap-28 items-center">
         <div className="bg-red-400 w-56 h-56 md:w-72 md:h-72  rounded-full mt-8">
           <img
             src={memoji}
@@ -57,7 +75,7 @@ const About = () => {
             className="w-48 h-48 md:w-64 md:h-64 mx-auto"
           />
         </div>
-        <div className="flex flex-col w-2/3">
+        <div className="flex flex-col w-full md:w-2/3">
           <div className=" text-white text-4xl font-semibold font-openSans leading-[52px]">
             I’m Sejal
           </div>
@@ -70,40 +88,40 @@ const About = () => {
             meaningful problems and improve people's lives through intuitive and
             impactful design solutions.
           </div>
-          <div className="justify-start items-start gap-20 inline-flex py-8 border-y-[1px] border-y-red-400 mt-8">
+          <div className="justify-start items-start gap-8 md:gap-20 inline-flex py-8 border-y-[1px] border-y-red-400 mt-8">
             <div className="flex-col justify-start items-start gap-2 inline-flex">
-              <div className="w-[78px] text-white text-4xl font-semibold font-openSans leading-[52px]">
+              <div className="w-[78px] text-white text-2xl md:text-5xl font-semibold font-openSans leading-[52px]">
                 2+
               </div>
-              <div className=" text-white text-xl font-normal font-openSans leading-snug">
+              <div className=" text-white text-base md:text-xl font-normal font-openSans leading-snug">
                 Years of Experience
               </div>
             </div>
-            <div className="flex-col justify-start items-end gap-2 inline-flex">
-              <div className=" text-white text-4xl font-semibold font-openSans leading-[52px]">
+            <div className="flex-col justify-start items-start gap-2 inline-flex">
+              <div className=" text-white text-2xl md:text-5xl font-semibold font-openSans leading-[52px]">
                 10+
               </div>
-              <div className=" text-white text-xl font-normal font-openSans leading-snug">
+              <div className=" text-white text-base md:text-xl font-normal font-openSans leading-snug">
                 Projects{" "}
               </div>
             </div>
             <div className="flex-col justify-start items-start gap-2 inline-flex">
-              <div className=" text-white text-5xl font-semibold font-openSans leading-[52px]">
+              <div className=" text-white text-2xl md:text-5xl font-semibold font-openSans leading-[52px]">
                 5
               </div>
-              <div className=" text-white text-xl font-normal font-openSans leading-snug">
+              <div className=" text-white text-base md:text-xl font-normal font-openSans leading-snug">
                 Companies worked at
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="mt-32 flex flex-col justify-center items-center">
+      <div className="mt-16 md:mt-32 flex flex-col justify-center items-center">
         <div className="px-5 py-1 bg-zinc-900 rounded-xl w-fit text-gray-300 text-sm font-normal font-openSans leading-tight">
           My Top Skills
         </div>
         <div className="grid grid-cols-2  md:grid-cols-5 grid-flow-row gap-4 my-8">
-          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-36 md:w-52 p-2 md:p-4 flex flex-col gap-4">
             <div className="justify-start items-center gap-4 inline-flex">
               <img src={pointer} alt="" srcset="" />
               <div className="text-white text-sm font-normal font-openSans leading-tight">
@@ -118,7 +136,7 @@ const About = () => {
               <Half />
             </div>
           </div>
-          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-36 md:w-52 p-4 flex flex-col gap-4">
             <div className="justify-start items-center gap-4 inline-flex">
               <img src={pointer} alt="" srcset="" />
               <div className="text-white text-sm font-normal font-openSans leading-tight">
@@ -133,7 +151,7 @@ const About = () => {
               <Half />
             </div>
           </div>
-          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-36 md:w-52 p-2 md:p-4 flex flex-col gap-4">
             <div className="justify-start items-center gap-4 inline-flex">
               <img src={pointer} alt="" srcset="" />
               <div className="text-white text-sm font-normal font-openSans leading-tight">
@@ -148,7 +166,7 @@ const About = () => {
               <Half />
             </div>
           </div>
-          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-36 md:w-52 p-2 md:p-4  flex flex-col gap-4">
             <div className="justify-start items-center gap-4 inline-flex">
               <img src={pointer} alt="" srcset="" />
               <div className="text-white text-sm font-normal font-openSans leading-tight">
@@ -163,7 +181,7 @@ const About = () => {
               <Half />
             </div>
           </div>
-          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-36 md:w-52 p-2 md:p-4  flex flex-col gap-4">
             <div className="justify-start items-center gap-4 inline-flex">
               <img src={pointer} alt="" srcset="" />
               <div className="text-white text-sm font-normal font-openSans leading-tight">
@@ -178,7 +196,7 @@ const About = () => {
               <Half />
             </div>
           </div>
-          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-36 md:w-52 p-2 md:p-4  flex flex-col gap-4">
             <div className="justify-start items-center gap-4 inline-flex">
               <img src={pointer} alt="" srcset="" />
               <div className="text-white text-sm font-normal font-openSans leading-tight">
@@ -193,7 +211,7 @@ const About = () => {
               <Half />
             </div>
           </div>
-          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-36 md:w-52 p-2 md:p-4  flex flex-col gap-4">
             <div className="justify-start items-center gap-4 inline-flex">
               <img src={pointer} alt="" srcset="" />
               <div className="text-white text-sm font-normal font-openSans leading-tight">
@@ -208,7 +226,7 @@ const About = () => {
               <Empty />
             </div>
           </div>
-          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-36 md:w-52 p-2 md:p-4  flex flex-col gap-4">
             <div className="justify-start items-center gap-4 inline-flex">
               <img src={pointer} alt="" srcset="" />
               <div className="text-white text-sm font-normal font-openSans leading-tight">
@@ -223,7 +241,7 @@ const About = () => {
               <Empty />
             </div>
           </div>
-          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-36 md:w-52 p-2 md:p-4  flex flex-col gap-4">
             <div className="justify-start items-center gap-4 inline-flex">
               <img src={pointer} alt="" srcset="" />
               <div className="text-white text-sm font-normal font-openSans leading-tight">
@@ -238,7 +256,7 @@ const About = () => {
               <Empty />
             </div>
           </div>
-          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-52 p-4 flex flex-col gap-4">
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-36 md:w-52 p-2 md:p-4  flex flex-col gap-4">
             <div className="justify-start items-center gap-4 inline-flex">
               <img src={pointer} alt="" srcset="" />
               <div className="text-white text-sm font-normal font-openSans leading-tight">
@@ -255,7 +273,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="mt-32 flex flex-col justify-center items-center">
+      <div className="mt-16 md:mt-32 flex flex-col justify-center items-center">
         <div className="px-5 py-1 bg-zinc-900 rounded-xl w-fit text-gray-300 text-sm font-normal font-openSans leading-tight">
           My Top Skills
         </div>
