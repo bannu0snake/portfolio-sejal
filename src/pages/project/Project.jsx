@@ -28,7 +28,7 @@ const projects = {
         "The conference was held at Köln International School of Design, Germany from 19 July 2022 to 2uly 2022. Each day had a theme for the speakers and the workshops.",
       ],
     },
-    bgColor: "yellow-300",
+    bgColor: "bg-yellow-300",
     titleColor: "text-yellow-300",
     textColor: "black",
     link: "https://www.behance.net/gallery/153026427/Hidden-Layers-Design-and-AI-%28Live-Project%29",
@@ -59,7 +59,7 @@ const projects = {
         "Further, the usability testing was conducted to test the user satisfaction of the application.",
       ],
     },
-    bgColor: "slate-500",
+    bgColor: "bg-[#6E7696]",
     titleColor: "text-slate-500",
     textColor: "white",
     link: "https://www.behance.net/gallery/154905911/Subspace-Subscription-Management",
@@ -93,7 +93,7 @@ const projects = {
         "Then we did usability testing for the prototype.",
       ],
     },
-    bgColor: "blue-400",
+    bgColor: "bg-blue-400",
     titleColor: "text-blue-400",
     textColor: "white",
     link: "https://drive.google.com/drive/u/0/mobile/folders/1XJw0vhBmmtgRh7CPinOC_GCsuwbNFKWb?sort=13&direction=a",
@@ -127,7 +127,7 @@ const projects = {
       desc3:
         "The methods we followed are Desk Study, Observational Study, Sequence Model, Flow Model, Cultural Model, Competitive Analysis, Competitive Matrix, Qualitative Research (Tele Interviews), Quantitative Research (Survey), User Personas, Wireframing and Pilot Study",
     },
-    bgColor: "cyan-600",
+    bgColor: "bg-cyan-600",
     titleColor: "text-cyan-600",
     textColor: "white",
     link: "https://www.behance.net/gallery/156157763/DocTalk-Case-Study",
@@ -163,16 +163,17 @@ const projects = {
       desc3:
         "The methods we followed are Desk Study, Observational Study, Sequence Model, Flow Model, Cultural Model, Competitive Analysis, Competitive Matrix, Qualitative Research (Tele Interviews), Quantitative Research (Survey), User Personas, Wireframing and Pilot Study",
     },
-    bgColor: "teal-600",
+    bgColor: "bg-teal-600",
     titleColor: "text-teal-600",
     textColor: "white",
     link: "https://drive.google.com/file/d/1el_aBbz_12WG_0VSv-tyRTYqppp8kkCe/view?usp=sharing",
   },
 };
 const Tag = ({ tag, bgColor, textColor }) => {
-  const background = "bg-" + bgColor;
+  // const background = "bg-" + bgColor;
   const color = "text-" + textColor;
-  return <div className={`rounded-full p-2 ${background} ${color}`}>{tag}</div>;
+  // console.log("background: ", background);
+  return <div className={`rounded-full p-2 ${bgColor} ${color}`}>{tag}</div>;
 };
 const Project = () => {
   const location = useLocation();
@@ -184,15 +185,16 @@ const Project = () => {
   }, []);
   return (
     <div>
-      <div className="flex flex-col my-8 items-center mx-40">
-        <div className="text-white text-5xl leading-10 font-bold font-rubik">
+      <div className="flex flex-col my-8 items-center mx-auto md:mx-40">
+        <div className="text-white w-full text-2xl md:text-5xl leading-10 font-bold font-rubik text-center">
           {data.title}
         </div>
-        <div className="flex gap-4 mt-6">
-          {data.tags.map((tag) => {
+        <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
+          {data.tags.map((tag, index) => {
             console.log(data.bgColor, data.textColor);
             return (
               <Tag
+                key={index}
                 tag={tag}
                 bgColor={data.bgColor}
                 textColor={data.textColor}
@@ -200,8 +202,8 @@ const Project = () => {
             );
           })}
         </div>
-        <div className="flex my-16">
-          <div className="basis-1/2 flex flex-col pr-16 border-r-[1px] border-zinc-600">
+        <div className="flex flex-col md:flex-row my-8 md:my-16">
+          <div className="basis-1/2 md:flex flex-col pr-16 border-r-[1px] border-zinc-600 hidden">
             <div className="border-b-[1px] border-zinc-600">
               <div className={`pb-5 font-medium text-2xl ${data.titleColor}`}>
                 {data.comp1.key}
@@ -222,7 +224,24 @@ const Project = () => {
               )}
             </div>
           </div>
-          <div className="basis-1/2 ml-16 ">
+          <div className="md:hidden mx-8 my-4">
+            <div className={`font-medium text-2xl ${data.titleColor} pb-5`}>
+              {data.comp1.key}
+            </div>
+            <div className="text-white">{data.comp1.desc}</div>
+          </div>
+          <div className="md:hidden mx-8 mt-4 mb-8">
+            <div className={`font-medium text-2xl ${data.titleColor} pb-5`}>
+              {data.comp2.key}
+            </div>
+            <div className="text-white">{data.comp2.desc}</div>
+            {data?.comp2?.note && (
+              <div className="my-4 text-stone-300 text-sm font-normal font-rubik">
+                {data?.comp2?.note}
+              </div>
+            )}
+          </div>
+          <div className="md:basis-1/2 mx-8 md:ml-16">
             <div className={`font-medium text-2xl text-${data.bgColor} pb-5`}>
               {data.comp3.key}
             </div>
@@ -252,7 +271,7 @@ const Project = () => {
         </div>
       </div>
       <div
-        className="text-white text-sm font-normal font-rubik underline text-right mx-40 mb-16 cursor-pointer"
+        className="text-white text-sm font-normal font-rubik underline text-center md:text-right mx-auto md:mx-40 mb-16 cursor-pointer"
         onClick={() => {
           window.open(data?.link, "_blank");
         }}

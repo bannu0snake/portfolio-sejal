@@ -65,9 +65,9 @@ const WorkItem = ({ role, desc, logo, timeline }) => {
 
 const About = () => {
   return (
-    <div className="my-16 mx-4 md:mx-36 mt-24">
-      <div className="flex flex-col md:flex-row gap-28 items-center">
-        <div className="bg-red-400 w-56 h-56 md:w-72 md:h-72  rounded-full mt-8">
+    <div className="my-16 mx-8 md:mx-36 mt-12 md:mt-24">
+      <div className="flex flex-col md:flex-row gap-12 md:gap-28 items-center">
+        <div className="bg-red-400 w-56 h-56 md:w-72 md:h-72  rounded-full mt-2 md:mt-8">
           <img
             src={memoji}
             alt=""
@@ -79,7 +79,7 @@ const About = () => {
           <div className=" text-white text-4xl font-semibold font-openSans leading-[52px]">
             I’m Sejal
           </div>
-          <div className=" text-white text-base font-normal font-openSans leading-snug mt-5">
+          <div className=" text-white text-sm md:text-base font-normal font-openSans leading-snug mt-5">
             A passionate User Experience (UX) Designer with a Bachelor's degree
             in Design (User Experience Design) from the MIT Institute of Design,
             Pune, completed in 2023. Over the past few years, I have honed my
