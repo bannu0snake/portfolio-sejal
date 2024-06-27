@@ -136,10 +136,10 @@ const About = () => {
               <Half />
             </div>
           </div>
-          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-36 md:w-52 p-4 flex flex-col gap-4">
+          <div className="bg-zinc-900 rounded-2xl border border-zinc-900 w-36 md:w-52 p-2 md:p-4 flex flex-col gap-4">
             <div className="justify-start items-center gap-4 inline-flex">
               <img src={pointer} alt="" srcset="" />
-              <div className="text-white text-sm font-normal font-openSans leading-tight">
+              <div className="text-white text-xs font-normal font-openSans leading-tight">
                 Design Thinking
               </div>
             </div>

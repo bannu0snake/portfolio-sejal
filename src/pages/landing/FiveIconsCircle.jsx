@@ -58,8 +58,13 @@ const FiveIconsCircle = () => {
           {/* </Tooltip> */}
         </div>
       </div>
-      <div className="m-10 h-56 w-56 md:h-80 md:w-80  bg-[#CACACA] rounded-full mt-12 mx-12 relative">
-        <img className="mx-auto h-56" src={Sejal} alt="" srcset="" />
+      <div className="m-10 h-56 w-56 md:h-72 md:w-72  bg-[#CACACA] rounded-full mt-12 mx-12 relative">
+        <img
+          className="mx-auto h-56 md:h-[19rem]"
+          src={Sejal}
+          alt=""
+          srcset=""
+        />
       </div>
     </div>
   );
