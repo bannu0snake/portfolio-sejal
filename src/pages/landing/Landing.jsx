@@ -23,7 +23,7 @@ const Info = () => {
   }, [value]);
   return (
     <div>
-      <div className="flex flex-col md:flex-row ml-4 md:ml-24 mt-12 md:my-24">
+      <div className="flex flex-col md:flex-row ml-4 md:ml-24 mt-12 md:my-28">
         <div className="basis-1/2">
           <div className="font-pecita text-4xl md:text-6xl text-stone-200 ">
             Hey!

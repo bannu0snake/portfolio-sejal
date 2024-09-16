@@ -1,107 +1,98 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Icon1 from "../../assets/svgs/bi_laptop-fill.svg";
 import Icon2 from "../../assets/svgs/material-symbols-light_work.svg";
 import Icon3 from "../../assets/svgs/mdi_location.svg";
 import Icon4 from "../../assets/svgs/vaadin_office.svg";
 import Icon5 from "../../assets/svgs/wpf_like.svg";
 import Sejal from "../../assets/images/Subject 1.png";
+
 const FiveIconsCircle = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(-1); // -1 means no icon is hovered
+  const [isManuallyHovered, setIsManuallyHovered] = useState(false); // To track manual hovering
+
   const ICONS = [
     {
       icon: Icon1,
       ctx: "2+ years of experience",
       position: "right-2 bottom-6 absolute",
+      subPosition: "top-full mt-2 right-[-24px]",
     },
     {
       icon: Icon4,
       ctx: "MIT Institute of Design (B. Des in UX)",
       position: "top-0 mx-auto",
+      subPosition: "bottom-full mb-2",
     },
     {
       icon: Icon2,
       ctx: "Signzy",
       position: "left-2 bottom-6 absolute",
+      subPosition: "top-full mt-2 right-0",
     },
     {
       icon: Icon3,
       ctx: "Bengaluru",
       position: "right-0 top-24 absolute",
+      subPosition: "bottom-full mb-2",
     },
     {
       icon: Icon5,
       ctx: "UX Research",
       position: "left-0 top-24 absolute",
+      subPosition: "bottom-full mb-2",
     },
   ];
+
+  // Effect to handle automatic hovering
+  useEffect(() => {
+    // Only run the interval if not manually hovering
+    if (!isManuallyHovered) {
+      const interval = setInterval(() => {
+        setHoveredIndex((prevIndex) => (prevIndex + 1) % ICONS.length);
+      }, 1000); // Change the hovered icon every second
+
+      // Cleanup interval on component unmount
+      return () => clearInterval(interval);
+    }
+  }, [ICONS.length, isManuallyHovered]);
+
+  // Event handlers to start/stop manual hover
+  const handleMouseEnter = (index) => {
+    setIsManuallyHovered(true);
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setIsManuallyHovered(false);
+  };
+
   return (
     <div className="relative">
-      <div
-        className={`w-14 h-14 ${ICONS[0].position} transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300`}
-      >
-        <div className="relative group">
-          <div className="whitespace-nowrap  absolute bottom-full mb-2 hidden w-fit bg-gray-800 text-white text-xs rounded py-2 px-3 group-hover:block">
-            {ICONS[0].ctx}
+      {ICONS.map((item, index) => (
+        <div
+          key={index}
+          className={`w-14 h-14 ${
+            item.position
+          } transition ease-in-out duration-300 ${
+            hoveredIndex === index ? "-translate-y-1 scale-110" : ""
+          }`}
+          onMouseEnter={() => handleMouseEnter(index)}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div className="relative">
+            <div
+              className={`whitespace-nowrap absolute ${item.subPosition} ${
+                hoveredIndex === index ? "block" : "hidden"
+              } w-fit bg-gray-800 text-white text-xs rounded py-2 px-3`}
+            >
+              {item.ctx}
+            </div>
+            <img src={item.icon} alt="" />
           </div>
-          {/* <Tooltip text="2+ years of experience"> */}
-          <img src={ICONS[0].icon} alt="" srcset="" />
-          {/* </Tooltip> */}
         </div>
-      </div>
-      <div
-        className={`w-14 h-14 ${ICONS[1].position} transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300`}
-      >
-        <div className="relative group">
-          <div className="whitespace-nowrap absolute bottom-full mb-2 hidden w-fit bg-gray-800 text-white text-xs rounded py-2 px-3 group-hover:block">
-            {ICONS[1].ctx}
-          </div>
-          {/* <Tooltip text="2+ years of experience"> */}
-          <img className="w-16 h-16" src={ICONS[1].icon} alt="" srcset="" />
-          {/* </Tooltip> */}
-        </div>
-      </div>
-      <div
-        className={`w-14 h-14 ${ICONS[2].position} transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300`}
-      >
-        <div className="relative group">
-          <div className="whitespace-nowrap absolute bottom-full mb-2 hidden w-fit bg-gray-800 text-white text-xs rounded py-2 px-3 group-hover:block">
-            {ICONS[2].ctx}
-          </div>
-          {/* <Tooltip text="2+ years of experience"> */}
-          <img className="w-16 h-16" src={ICONS[2].icon} alt="" srcset="" />
-          {/* </Tooltip> */}
-        </div>
-      </div>
-      <div
-        className={`w-14 h-14 ${ICONS[3].position} transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300`}
-      >
-        <div className="relative group">
-          <div className="whitespace-nowrap  absolute bottom-full mb-2 hidden w-fit bg-gray-800 text-white text-xs rounded py-2 px-3 group-hover:block">
-            <div>{ICONS[3].ctx}</div>
-          </div>
-          {/* <Tooltip text="2+ years of experience"> */}
-          <img src={ICONS[3].icon} alt="" srcset="" />
-          {/* </Tooltip> */}
-        </div>
-      </div>
-      <div
-        className={`w-14 h-14 ${ICONS[4].position} transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300`}
-      >
-        <div className="relative group">
-          <div className="whitespace-nowrap absolute bottom-full mb-2 hidden w-fit bg-gray-800 text-white text-xs rounded py-2 px-3 group-hover:block">
-            {ICONS[4].ctx}
-          </div>
-          {/* <Tooltip text="2+ years of experience"> */}
-          <img src={ICONS[4].icon} alt="" srcset="" />
-          {/* </Tooltip> */}
-        </div>
-      </div>
-      <div className="m-10 h-56 w-56 md:h-72 md:w-72  bg-[#CACACA] rounded-full mt-12 mx-12 relative">
-        <img
-          className="mx-auto h-56 md:h-[19rem]"
-          src={Sejal}
-          alt=""
-          srcset=""
-        />
+      ))}
+      <div className="m-10 h-56 w-56 md:h-72 md:w-72 bg-[#CACACA] rounded-full mt-12 mx-12 relative">
+        <img className="mx-auto h-56 md:h-[19rem]" src={Sejal} alt="" />
       </div>
     </div>
   );
