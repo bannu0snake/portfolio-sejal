@@ -4,6 +4,7 @@ import Arrow1 from "../../assets/svgs/Group.svg";
 import samsung from "../../assets/svgs/image 1.svg";
 import company3 from "../../assets/svgs/image 2.svg";
 import company4 from "../../assets/svgs/image 3.svg";
+import company5 from "../../assets/companies/saaspect.svg";
 import { useNavigate } from "react-router-dom";
 import Project1 from "../ProjectOveriviews/Project1";
 import Project2 from "../ProjectOveriviews/Project2";
@@ -106,31 +107,23 @@ const Work = () => {
           Where I've Worked
         </div>
         <div className="">
-          <div className="flex justify-center items-center gap-2 md:gap-16 py-8 md:py-36 mx-4 md:mx-16">
-            <img
-              src={signzy}
-              alt=""
-              srcset=""
-              className="h-16 w-16 md:h-full md:w-full"
-            />
-            <img
-              src={samsung}
-              alt=""
-              srcset=""
-              className="h-16 w-16 md:h-full md:w-full"
-            />
-            <img
-              src={company3}
-              alt=""
-              srcset=""
-              className="h-16 w-16 md:h-full md:w-full"
-            />
-            <img
-              src={company4}
-              alt=""
-              srcset=""
-              className="h-16 w-16 md:h-full md:w-full"
-            />
+          <div className="flex items-center justify-center gap-2 md:gap-16 py-8 md:py-36 mx-4 md:mx-16">
+            <div className="w-48">
+              <img src={signzy} alt="" srcset="" className="" />
+            </div>
+            <div className="w-48">
+              <img src={samsung} alt="" srcset="" className="" />
+            </div>
+            <div className="w-48">
+              <img src={company3} alt="" srcset="" className="" />
+            </div>
+
+            <div className="w-48 my-auto">
+              <img src={company5} alt="" srcset="" className="" />
+            </div>
+            <div className="w-48">
+              <img src={company4} alt="" srcset="" className="" />
+            </div>
           </div>
         </div>
       </div>
