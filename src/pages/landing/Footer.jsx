@@ -104,7 +104,7 @@ const Footer = () => {
           </div>
           <div className="py-9 flex flex-col md:flex-row justify-between">
             <div className="text-white">
-              Copyright© 2024 All Rights Reserved.
+              Copyright© 2025 All Rights Reserved.
             </div>
             <div className="text-white md:text-sm text-xs">
               Designed By{" "}

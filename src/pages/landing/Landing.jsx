@@ -96,7 +96,7 @@ const Landing = () => {
   const navigate = useNavigate();
   const openPdf = () => {
     const pdfUrl =
-      "https://drive.google.com/file/d/1exxL5ke3vikNP2TMVwfK3Vy_OIBpiSGY/view"; // Replace with your PDF URL
+      "https://drive.google.com/file/d/1Rpuijlxd9ZDIlq4ktNTenwVPIMCzceLt/view"; // Replace with your PDF URL
     window.open(pdfUrl, "_blank");
   };
   return (
