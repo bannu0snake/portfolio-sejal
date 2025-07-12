@@ -13,7 +13,7 @@ import Project4 from "../ProjectOveriviews/Project4";
 import Project5 from "../ProjectOveriviews/Project5";
 import Project6 from "../ProjectOveriviews/Project6";
 
-const Work = () => {
+const Work = React.memo(() => {
   const [selected, setSelected] = useState("");
   const Project = ({ title, desc, id }) => {
     const navigate = useNavigate();
@@ -24,10 +24,12 @@ const Work = () => {
         onMouseEnter={() => {
           setIsActive(true);
           setSelected(id);
+          console.log("entered");
         }}
         onMouseLeave={() => {
           setIsActive(false);
           setSelected("");
+          console.log("left");
         }}
         onClick={() => {
           navigate("/project", { state: { project: id } });
@@ -138,6 +140,6 @@ const Work = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Work;
