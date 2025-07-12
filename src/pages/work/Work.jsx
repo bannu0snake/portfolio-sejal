@@ -11,7 +11,8 @@ import Project2 from "../ProjectOveriviews/Project2";
 import Project3 from "../ProjectOveriviews/Project3";
 import Project4 from "../ProjectOveriviews/Project4";
 import Project5 from "../ProjectOveriviews/Project5";
-// import signzy from "../../assets/svgs/image 1.svg";
+import Project6 from "../ProjectOveriviews/Project6";
+
 const Work = () => {
   const [selected, setSelected] = useState("");
   const Project = ({ title, desc, id }) => {
@@ -52,7 +53,12 @@ const Work = () => {
   };
   const data = [
     {
-      title: "Hidden Layers (Live Project) ",
+      title: "Stamp Wallet Management (Live Project)",
+      key: "STAMP_WALLET_MANAGEMENT",
+      desc: "An intelligent stamp wallet management system designed for Contract360 by Signzy. It automates stamp procurement, predicts inventory depletion, and optimizes stamp consumption to prevent revenue loss and contract delays for enterprise clients.",
+    },
+    {
+      title: "Hidden Layers (Live Project)",
       key: "HIDDEN_LAYERS",
       desc: "Hidden Layers- The project is a joint research initiative of five leading German art and design schools that aims at sustainably anchoring the teaching of AI topics in the field of design.",
     },
@@ -85,21 +91,24 @@ const Work = () => {
             Hover on a project to view.
           </div>
         ) : (
-          <div className="basis-1/2  hidden md:block">
+          <div className="basis-1/2  hidden md:block h-screen">
             {selected === "HIDDEN_LAYERS" && <Project1 />}
+            {selected === "STAMP_WALLET_MANAGEMENT" && <Project6 />}
             {selected === "SUB_SPACE" && <Project2 />}
             {selected === "ONEDRIVE_REDISIGN" && <Project3 />}
             {selected === "DOCTALK" && <Project4 />}
             {selected === "WASTE_MANAGEMENT" && <Project5 />}
           </div>
         )}
-        <div className="md:basis-1/2 flex flex-col pt-5">
+        <div className="md:basis-1/2 flex flex-col pt-5 h-screen">
           <div className="text-stone-200 text-5xl px-10 font-normal font-openSans pb-4">
             My Work
           </div>
-          {data.map(({ title, desc, key }) => (
-            <Project title={title} desc={desc} id={key} />
-          ))}
+          <div className="overflow-y-scroll scrollbar scrollbar-track-red-400 scrollbar-thumb-red-400">
+            {data.map(({ title, desc, key }) => (
+              <Project title={title} desc={desc} id={key} />
+            ))}
+          </div>
         </div>
       </div>
       <div className="">

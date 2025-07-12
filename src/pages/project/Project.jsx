@@ -33,6 +33,39 @@ const projects = {
     textColor: "black",
     link: "https://www.behance.net/gallery/153026427/Hidden-Layers-Design-and-AI-%28Live-Project%29",
   },
+  STAMP_WALLET_MANAGEMENT: {
+    title: "Stamp Wallet Management",
+    tags: [
+      "User Research",
+      "Live Project",
+      "Prototyping",
+      "Product Requirements",
+    ],
+    comp1: {
+      key: "WHAT?",
+      desc: "An intelligent stamp wallet management system designed for Contract360 by Signzy. It automates stamp procurement, predicts inventory depletion, and optimizes stamp consumption to prevent revenue los and contract delays for enterprise clients.",
+    },
+    comp2: {
+      key: "WHY?",
+      desc: "Enterprise clients were losing lakhs in stamp duty and facing critical delays during high stake contract closures due to manual workflows and lack of predictive tools. The absence of automation created compliance risks, wasted stamp value, and operational chaos across teams",
+    },
+    comp3: {
+      key: "HOW?",
+      desc0:
+        "I led the end-to-end UX design for a predictive, automated stamp management ecosystem involving -",
+      desc: [
+        "15+ stakeholder interviews across finance, legal, ops and revenue teams",
+        "Workflow redesign to collapse a 9-step manual process into automated flows",
+        "Intelligent alert engine using consumption pattern anaysis",
+        "Optimization logic to minimize stamp duty loss",
+        "Interface for both client-facing dashboards and internal ops portals",
+      ],
+    },
+    bgColor: "bg-blue-400",
+    titleColor: "text-blue-400",
+    textColor: "black",
+    link: "https://stamp-wallet-case-study.vercel.app/",
+  },
   SUB_SPACE: {
     title: "Subspace",
     tags: [
@@ -43,7 +76,7 @@ const projects = {
     ],
     comp1: {
       key: "WHAT?",
-      desc: "To design a subscription management interface that allows users to readily pay for all their subscriptions and maintain a history of the same in the easiest and the simplest way possible at a single place while giving them insights and suggestions based on their usage.",
+      desc: "To design a subscription management interface that allows users to readily pay for all their subscriptions and maintain a history of the same in the easiest and the simplest way possible at a single place while giving them insights and suggestions based on their usage.",
     },
     comp2: {
       key: "WHY?",
@@ -202,7 +235,7 @@ const Project = () => {
             );
           })}
         </div>
-        <div className="flex flex-col md:flex-row my-8 md:my-16">
+        <div className="flex flex-col md:flex-row my-4 md:mt-8">
           <div className="basis-1/2 md:flex flex-col pr-16 border-r-[1px] border-zinc-600 hidden">
             <div className="border-b-[1px] border-zinc-600">
               <div className={`pb-5 font-medium text-2xl ${data.titleColor}`}>
@@ -212,7 +245,7 @@ const Project = () => {
             </div>
             <div>
               <div
-                className={`${data.titleColor} pt-16 pb-5 font-medium text-2xl`}
+                className={`${data.titleColor} pt-8 pb-5 font-medium text-2xl`}
               >
                 {data.comp2.key}
               </div>
@@ -242,9 +275,18 @@ const Project = () => {
             )}
           </div>
           <div className="md:basis-1/2 mx-8 md:ml-16">
-            <div className={`font-medium text-2xl text-${data.bgColor} pb-5`}>
+            <div
+              className={`font-medium text-2xl text- pb-5 ${data.titleColor}`}
+            >
               {data.comp3.key}
             </div>
+            {data?.comp3?.desc0 && (
+              <div className="flex gap-2 text-white font-extrabold">
+                <div className="text-white text-base font-normal font-rubik leading-relaxed ">
+                  {data?.comp3?.desc0}
+                </div>
+              </div>
+            )}
             {data.comp3.desc.map((item) => (
               <div className="flex gap-2 text-white font-extrabold">
                 <div>{"•"}</div>
